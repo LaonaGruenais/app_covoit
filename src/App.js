@@ -1,32 +1,35 @@
-import { NativeBaseProvider } from 'native-base';
-import React from 'react';
+import { NavigationContainer } from '@react-navigation/native'
+import { NativeBaseProvider } from 'native-base'
+import React from 'react'
 import {
   SafeAreaView,
   StatusBar,
-  useColorScheme,
-} from 'react-native';
+  useColorScheme
+} from 'react-native'
 
 import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
-import AuthScreen from './screens/AuthScreen';
-
+  Colors
+} from 'react-native/Libraries/NewAppScreen'
+import Navigator from './navigation/Navigator'
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-  
+  const isDarkMode = useColorScheme() === 'dark'
+
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+    flex: 1,
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter
+  }
 
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NativeBaseProvider>
-        <AuthScreen />
-      </NativeBaseProvider>
+      <NavigationContainer>
+        <NativeBaseProvider>
+          <Navigator />
+        </NativeBaseProvider>
+      </NavigationContainer>
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default App;
+export default App
