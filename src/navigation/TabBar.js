@@ -1,49 +1,50 @@
 import React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native';
-import { tabBarStyle } from '../theme/Styles';
+import { View, Text, TouchableOpacity } from 'react-native'
+import { tabBarStyle } from '../theme/Styles'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-function TabBar({ state, descriptors, navigation }) {
+function TabBar ({ state, descriptors, navigation }) {
   return (
     <View style={tabBarStyle.container}>
       {state.routes.map((route, index) => {
-        const { options } = descriptors[route.key];
+        const { options } = descriptors[route.key]
         const label =
           options.tabBarLabel !== undefined
             ? options.tabBarLabel
             : options.title !== undefined
               ? options.title
-              : route.name;
+              : route.name
 
-        const icon = options.tabBarIcon
-        console.log(icon);
+        if (!options.tabBarIcon) {
+          return null
+        }
 
-        const isFocused = state.index === index;
+        const isFocused = state.index === index
 
         const onPress = () => {
           const event = navigation.emit({
             type: 'tabPress',
             target: route.key,
-            canPreventDefault: true,
-          });
+            canPreventDefault: true
+          })
 
           if (!isFocused && !event.defaultPrevented) {
             // The `merge: true` option makes sure that the params inside the tab screen are preserved
-            navigation.navigate({ name: route.name, merge: true });
+            navigation.navigate({ name: route.name, merge: true })
           }
-        };
+        }
 
         const onLongPress = () => {
           navigation.emit({
             type: 'tabLongPress',
-            target: route.key,
-          });
-        };
+            target: route.key
+          })
+        }
 
         return (
           <TouchableOpacity
             key={route.key}
-            accessibilityRole="button"
+            accessibilityRole='button'
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarTestID}
@@ -57,10 +58,10 @@ function TabBar({ state, descriptors, navigation }) {
               {label}
             </Text>
           </TouchableOpacity>
-        );
+        )
       })}
     </View>
-  );
+  )
 }
 
 export default TabBar

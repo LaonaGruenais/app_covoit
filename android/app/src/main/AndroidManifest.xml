@@ -2,6 +2,7 @@
   package="com.covoit">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
       android:name=".MainApplication"
@@ -9,6 +10,12 @@
       android:icon="@mipmap/ic_launcher"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
+      <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyDINzMzmZNRWimE01cdjqn_-bS9vOreAKQ" />
+        <uses-library
+        android:name="org.apache.http.legacy"
+        android:required="false" />
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"

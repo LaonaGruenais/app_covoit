@@ -1,6 +1,6 @@
-import React from "react"
-import { StyleSheet } from "react-native"
-import { colors } from "../theme/Theme"
+// import React from 'react'
+import { StyleSheet } from 'react-native'
+import { colors } from '../theme/Theme'
 
 const tabBarStyle = StyleSheet.create({
   container: {
@@ -28,6 +28,16 @@ const tabBarStyle = StyleSheet.create({
   }
 })
 
+const loginStyle = StyleSheet.create({
+  input: {
+    marginVertical: 30
+  },
+  button: {
+    marginVertical: 30
+  }
+})
+
 export {
-  tabBarStyle
+  tabBarStyle,
+  loginStyle
 }

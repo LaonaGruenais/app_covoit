@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { Box, Button, FormControl, Input, WarningOutlineIcon } from 'native-base'
 import Icon from 'react-native-vector-icons/Ionicons'
+import { loginStyle } from '../../theme/Styles'
 
 function LoginForm({ onLogin }) {
   const [showPassword, setShowPassword] = useState(false)
 
   return (
     <Box w='80%'>
-      <FormControl>
+      <FormControl style={loginStyle.input}>
         <FormControl.Label>Email</FormControl.Label>
         <Input placeholder='test@my-digital-school.org' />
         <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon />}>
@@ -34,7 +35,7 @@ function LoginForm({ onLogin }) {
           Une erreur s'est produite
         </FormControl.ErrorMessage>
       </FormControl>
-      <Button size='md' onPress={onLogin}>Se connecter</Button>
+      <Button style={loginStyle.button} size='md' onPress={onLogin}>Se connecter</Button>
     </Box>
   )
 }

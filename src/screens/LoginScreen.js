@@ -5,10 +5,10 @@ import LoginForm from '../components/forms/LoginForm'
 import { loginUser, useAuth } from '../contexts/AuthContext'
 import Images from '../images/Images'
 
-function LoginScreen({ navigation }) {
+function LoginScreen ({ navigation }) {
   const isDarkMode = useColorScheme() === 'dark'
 
-  // Récupérer les identifiants et le token 
+  // Récupérer les identifiants et le token
   const { dispatch } = useAuth()
   const handleLogin = () => {
     loginUser(null, dispatch)
