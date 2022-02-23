@@ -9,13 +9,14 @@ function LoginScreen ({ navigation }) {
   const isDarkMode = useColorScheme() === 'dark'
 
   // Récupérer les identifiants et le token
-  const { dispatch } = useAuth()
-  const handleLogin = () => {
-    loginUser(null, dispatch)
+  const { dispatch, state } = useAuth()
+  const handleLogin = async (credentials) => {
+    await loginUser(credentials, dispatch)
   }
   return (
     <Box>
       <Center>
+        <Text>{JSON.stringify(state)}</Text>
         {/* Affichage du logo */}
         <Image source={isDarkMode ? Images.logoLight : Images.logoDark} size='2xl' resizeMode='contain' alt='App Logo' />
         <LoginForm onLogin={handleLogin} />

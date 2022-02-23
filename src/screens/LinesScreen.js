@@ -9,7 +9,7 @@ function LinesScreen ({ navigation }) {
   const [mapMargin, setMapMargin] = useState(1)
 
   const onMapReady = () => {
-    PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCES_FINE_LOCATION)
+    PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION)
       .then((granted) => {
         setMapMargin(0)
       })
@@ -18,7 +18,7 @@ function LinesScreen ({ navigation }) {
   return (
     // Maps Google
     <Container style={{ maxWidth: '100%' }} h='100%' w='100%'>
-      <MapView
+      {/* <MapView
         provider='google'
         style={{
           flex: 1,
@@ -32,7 +32,7 @@ function LinesScreen ({ navigation }) {
         showsCompass
         showsScale
         onMapReady={onMapReady}
-      />
+      /> */}
       <Fab
         onPress={() => navigation.navigate('Modal')}
         positon='absolute'
