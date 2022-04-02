@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // appel d'api strapi avec axios
 const api = axios.create({
-  baseURL: 'https://mds-covoit.sergent.tech/api',
+  baseURL: 'http://localhost:1337/api',
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json'
