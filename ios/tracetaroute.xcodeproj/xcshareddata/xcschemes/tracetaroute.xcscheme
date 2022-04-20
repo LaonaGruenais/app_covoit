@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "covoit.app"
-               BlueprintName = "covoit"
-               ReferencedContainer = "container:covoit.xcodeproj">
+               BuildableName = "tracetaroute.app"
+               BlueprintName = "tracetaroute"
+               ReferencedContainer = "container:tracetaroute.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "covoitTests.xctest"
-               BlueprintName = "covoitTests"
-               ReferencedContainer = "container:covoit.xcodeproj">
+               BuildableName = "tracetarouteTests.xctest"
+               BlueprintName = "tracetarouteTests"
+               ReferencedContainer = "container:tracetaroute.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "covoit.app"
-            BlueprintName = "covoit"
-            ReferencedContainer = "container:covoit.xcodeproj">
+            BuildableName = "tracetaroute.app"
+            BlueprintName = "tracetaroute"
+            ReferencedContainer = "container:tracetaroute.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "covoit.app"
-            BlueprintName = "covoit"
-            ReferencedContainer = "container:covoit.xcodeproj">
+            BuildableName = "tracetaroute.app"
+            BlueprintName = "tracetaroute"
+            ReferencedContainer = "container:tracetaroute.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

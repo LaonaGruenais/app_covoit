@@ -87,6 +87,7 @@ const loginUser = async (credentials, dispatch) => {
   }
 }
 
+// Garder la donnée en mémoire
 const persistAuth = async (data) => {
   try {
     // on enregistre notre authentification

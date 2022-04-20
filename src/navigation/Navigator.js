@@ -51,7 +51,7 @@ function MainTabNavigator () {
 function Navigator () {
   // quand on click sur 'se connecter' met à jour les identifiants / token
   const { state } = useAuth()
-  console.log(state)
+  // console.log(state)
   // si j'ai un user et un token alors page home sinon page d'authentification
   if (state.user && state.token) {
     return (
